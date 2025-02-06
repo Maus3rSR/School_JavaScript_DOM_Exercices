@@ -1,89 +1,91 @@
 # Exercices sur les fonctions en JavaScript
 
-- Tu peux mettre toutes tes réponses dans le fichier `exercices.js`.
-- À chaque exercice _(chaque sous-titre après le titre Exercices dans cet énoncé)_, tu dois faire un commit avec le titre de l'exercice.
+- Écris toutes tes réponses dans le fichier `exercices.js`.
+- Pour chaque exercice _(chaque sous-titre après le titre Exercices dans cet énoncé)_, fais un commit avec le titre de l'exercice.
 
 ## Rappels
 
-- N'hésite pas à consulter vos notes de cours et la documentation en ligne.
-- Utilise `console.log` ou le `debugger` de votre outil de développement.
+- N'hésite pas à consulter tes notes de cours et la documentation en ligne.
+- Utilise `console.log` ou le `debugger` de ton navigateur pour déboguer ton code.
 
 ## Thème 🔮🧙‍♂️🧪🪙🍄
 
-- Tu es le sorcier Archibald 🧙‍♂️ et tu gères une petite boutique dans laquelle tu crées et vends des potions 🧪.
+- Tu incarnes le sorcier Archibald 🧙‍♂️ qui gère une petite boutique de potions magiques 🧪.
 
 ## Exercices
 
 ### Quel est le titre de la boutique
 
-**Objectif**: Apprendre à sélectionner un élément unique dans le DOM avec querySelector et à récupérer son contenu textuel.
+**Objectif**: Apprendre à sélectionner un noeud HTML unique dans le DOM avec querySelector et à récupérer son contenu textuel.
 
 **Instructions**:
 
-- Utilise la méthode `querySelector` sur `document` pour récupérer le titre de la boutique `<h1>` et affecte la à une constante.
-- Récupère le texte avec la propriété `textContent` et affiche sa valeur dans la `console`.
+- Utilise la méthode `querySelector` sur `document` pour récupérer le noeud HTML du titre `<h1>` et stocke-le dans une constante.
+- Récupère le texte contenu dans ce noeud avec la propriété `textContent` et affiche sa valeur dans la `console`.
 
-**Résultat attendu**: Le texte "Boutique d'Archibald le Sorcier de pacotille 🧙‍♂️" s'affiche dans la console.
+**Résultat attendu**: Le texte "Boutique d'Archibald le Sorcier de pacotille 🧙‍♂️" s'affiche dans la console du navigateur.
 
 ### Des informations manquent !
 
-**Objectif**: Apprendre à créer et ajouter des éléments dans le DOM de manière dynamique.
+**Objectif**: Apprendre à créer et ajouter des noeuds HTML dans le DOM de manière dynamique.
 
 **Instructions**:
 
-- Tu as oublié d'ajouter un paragraphe dans la description de ta boutique.
-  - Utilise la méthode `querySelector` sur `document` pour récupérer le noeud HTML parent du paragraphe existant dans le HTML et affecte le à une constante.
-  - Crée un nouveau paragraphe avec la méthode `createElement` de `document`.
-  - Ajoute le texte suivant `Pour cela, il vous suffit de cliquer sur une des potions de la liste ci-dessous pour l'acheter.` en l'affectant à la propriété `textContent` du paragraphe.
-  - Ajoute le paragraphe avec la méthode `appendChild` sur ta constante comportant le noeud HTML du parent.
+- Tu dois ajouter un paragraphe qui contiendra une instruction d'aide à l'achat dans la description de ta boutique.
+  - Utilise la méthode `querySelector` sur `document` pour récupérer le noeud HTML parent `<div id="description_boutique">` qui contient déjà un paragraphe de bienvenue, et stocke-le dans une constante.
+  - Crée un nouveau noeud HTML de type paragraphe avec la méthode `createElement('p')` de `document`.
+  - Ajoute le texte suivant `Pour cela, il vous suffit de cliquer sur une des potions de la liste ci-dessous pour l'acheter.` en l'affectant à la propriété `textContent` du nouveau paragraphe.
+  - Ajoute ce nouveau paragraphe comme enfant du noeud parent avec la méthode `appendChild`.
 
-**Résultat attendu**: Un nouveau paragraphe apparaît sous le texte de bienvenue avec les instructions d'achat.
+**Résultat attendu**: Un nouveau paragraphe apparaît sous le message de bienvenue avec les instructions d'achat.
 
 ### Roger, enfoiré !
 
-**Objectif**: Apprendre à supprimer des éléments du DOM.
+**Objectif**: Apprendre à supprimer des noeuds HTML du DOM.
 
 **Instructions**:
-Roger, un collègue sorcier jaloux, a entaché le titre de ta boutique (avec le mot `pacotille`).
+Roger, un collègue sorcier jaloux, a saboté le titre de ta boutique en ajoutant le mot "pacotille".
 
-- Utilise `querySelector` sur `document` pour récupérer le noeud HTML `<span id="blague_de_roger_le_sorcier">` et supprime-le du DOM avec la méthode `remove`.
+- Utilise `querySelector` sur `document` pour récupérer le noeud HTML `<span id="blague_de_roger_le_sorcier">` qui contient le texte indésirable.
+- Supprime ce noeud du DOM avec la méthode `remove()`.
 
-**Résultat attendu**: Le texte "de pacotille" disparaît du titre de la boutique.
+**Résultat attendu**: Le texte "de pacotille" disparaît du titre de la boutique, ne laissant que "Boutique d'Archibald le Sorcier 🧙‍♂️".
 
 ### Archibald n'est pas là, appelons le !
 
-**Objectif**: Apprendre à gérer les événements de clic et à afficher des alertes.
+**Objectif**: Apprendre à gérer les événements de clic et à afficher des alertes dans le navigateur.
 
 **Instructions**:
 
-- Utilise `querySelector` sur `document` pour récupérer le bouton et attache un évènement `click` avec la méthode `addEventListener`.
-- Depuis la fonction de rappel, utilise `alert` pour afficher `🧙‍♂️ J'arrive, j'arrive Aventurier !`.
+- Utilise `querySelector` sur `document` pour récupérer le noeud HTML du bouton `<button id="call_archibald">`.
+- Attache un écouteur d'événement de type `click` à ce bouton avec la méthode `addEventListener`.
+- Dans la fonction de rappel de l'événement (callback), utilise `alert` pour afficher le message `🧙‍♂️ J'arrive, j'arrive Aventurier !`.
 
-**Résultat attendu**: Une alerte apparaît avec le message quand on clique sur le bouton "Appeler Archibald".
+**Résultat attendu**: Une boîte de dialogue apparaît avec le message quand on clique sur le bouton "Appeler Archibald".
 
 ### Faisons un peu de magie 🪄
 
-**Objectif**: Apprendre à sélectionner plusieurs éléments et à modifier leurs styles dynamiquement.
+**Objectif**: Apprendre à sélectionner plusieurs noeuds HTML et à modifier leurs styles dynamiquement.
 
 **Instructions**:
 
-Le temps que tu arrives, l'Aventurier peut jouer avec des boutons permettant de changer les boîtes de couleur pour patienter.
+Pour divertir l'Aventurier pendant ton arrivée, il peut jouer avec des boutons magiques qui changent la couleur des boîtes.
 
-- Utilise `querySelectorAll` pour récupérer tous les noeuds HTML des boîtes à l'intérieur de la `<div id="boites_magique">`.
-- Attache un évènement à chacun des boutons.
-- En fonction de chaque bouton, change la couleur de fond des boîtes en utilisant la propriété `style`.
+- Utilise `querySelectorAll` pour récupérer tous les noeuds HTML des boîtes (classe 'boite') à l'intérieur de la `<div id="boites_magique">`.
+- Récupère chaque bouton de couleur avec `querySelector` (`#btn_change_red`, `#btn_change_blue`, `#btn_change_green`).
+- Pour chaque bouton, attache un écouteur d'événement qui modifiera la propriété `style.backgroundColor` des boîtes appropriées.
 
 **Résultat attendu**:
 
-- Le bouton rouge change la première boîte en rouge
-- Le bouton bleu change les deux premières boîtes en bleu
-- Le bouton vert change toutes les boîtes en vert
+- Le bouton rouge change la couleur de fond de la première boîte en 'red'
+- Le bouton bleu change la couleur de fond des deux premières boîtes en 'blue'
+- Le bouton vert change la couleur de fond de toutes les boîtes en 'green'
 
 ### Aventurier, voici ma boutique !
 
 **Objectif**: Apprendre à utiliser les templates HTML pour insérer des éléments plus complexes dans le DOM.
 
-**Note**: Vous avez un exemple dans le code HTML d'une carte de potion au niveau de `<section id="liste_potions" class="row">`. Ce code est à supprimer et sert d'exemple visuel.
+**Note**: Un exemple visuel d'une carte de potion est présent dans le HTML sous `<section id="liste_potions" class="row">`. Cet exemple est à ignorer, le vrai template à utiliser se trouve dans la balise `<template>` à la fin du document.
 
 Récupérez cette liste de potions :
 
