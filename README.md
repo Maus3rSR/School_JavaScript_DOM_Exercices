@@ -1,13 +1,12 @@
 # Exercices sur les fonctions en JavaScript
 
-- Toutes les réponses doivent être placées dans le fichier `exercices.js`.
-- Pour chaque exercice, tu dois faire un commit avec le titre de l'exercice.
-- Il n'est pas nécessaire de conserver le code précédent, mais ⚠️ **attention** certaines parties seront utiles pour les exercices suivants.
+- Tu peux mettre toutes tes réponses dans le fichier `exercices.js`.
+- À chaque exercice _(chaque sous-titre après le titre Exercices dans cet énoncé)_, tu dois faire un commit avec le titre de l'exercice.
 
 ## Rappels
 
-- N'hésitez pas à consulter vos notes de cours et la documentation en ligne.
-- Utilisez console.log() fréquemment pour vérifier vos résultats.
+- N'hésite pas à consulter vos notes de cours et la documentation en ligne.
+- Utilise `console.log` ou le `debugger` de votre outil de développement.
 
 ## Thème 🔮🧙‍♂️🧪🪙🍄
 
